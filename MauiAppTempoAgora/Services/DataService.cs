@@ -8,9 +8,11 @@ public class DataService
     public static async Task<Tempo?> GetPrevisao(string cidade)
     {
         Tempo? t = null;
-        string chave = "613507afe7f6cec1537d5cb08a5a1a2";
+        string chave = "6135072afe7f6cec1537d5cb08a5a1a2";
 
-        string url = $"https://api.openweatherpmap.org/data/2.5/weather?q={cidade}&units=metric&appid={chave}";
+        string url = $"https://api.openweathermap.org/data/2.5/weather?q={cidade}&units=metric&appid={chave}";
+
+        Console.WriteLine(url);
 
         using (HttpClient client = new HttpClient())
         {
